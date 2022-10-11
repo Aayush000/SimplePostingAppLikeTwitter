@@ -1,7 +1,9 @@
 ## install Mongoose
+
 `npm install mongoose`
 
 ## Create BookModel under models/BookModel.js
+
 ```
 // models/BookModel.js
 
@@ -38,6 +40,7 @@ module.exports = BookModel;
 ```
 
 ## config.js for db connection
+
 ```
 // config.js
 
@@ -45,6 +48,6 @@ let config = {
     dbUrl:
       "mongodb+srv://techomoro:password@cluster0.7cpxz.mongodb.net/posts?retryWrites=true&w=majority",
   };
-  
+
   module.exports = config;
 ```
