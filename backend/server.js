@@ -1,9 +1,14 @@
 /** Reference code: https://github.com/bpeddapudi/nodejs-basics-routes/blob/master/server.js
  * import express */
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import mongoose from "mongoose";
+// import express from "express";
+// import cors from "cors";
+// import dotenv from "dotenv";
+// import mongoose from "mongoose";
+
+const express = require("express"); // import express
+const cors = require("cors"); // import cors
+const dotenv = require("dotenv"); // import dotenv
+const mongoose = require("mongoose");
 
 // middleware
 const app = express(); // initialize express
@@ -34,12 +39,13 @@ db.once("open", function () {
 });
 
 // Schema for Post
-let postSchema = new mongoose.Schema(
+let Schema = mongoose.Schema;
+let postSchema = new Schema(
   {
     id: {
       type: Number,
     },
-    info: { type: String },
+    content: { type: String },
   },
   { timestamps: true }
 );

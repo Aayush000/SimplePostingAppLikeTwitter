@@ -56,7 +56,7 @@ function App() {
   const getPosts = async () => {
     const response = await fetch("http://localhost:3001/posts");
     const data = await response.json();
-    setData(data);
+    setData(data.data);
   };
 
   useEffect(() => {
